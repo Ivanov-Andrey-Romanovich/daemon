@@ -1,2 +1,2 @@
-# Tasks of linux cours
+# Tasks for linux cours
 repository with my daemon
