@@ -114,12 +114,14 @@ int Daemon(char *filename)
 						}
 					}
 					else if(chpid > 0){
-						pause();
-						while (!child)
-						{
-							sem_post(&smphr);
-							child = false;
-							break;
+						while (1){
+							if(child){
+								waitpid(-1, NULL, 0);
+								sem_post(&smphr);
+								child = false;
+								break;
+							}
+							pause();
 						}
 					} else if(chpid<0){
 						write(outFile,"\nFork error\n",12);
