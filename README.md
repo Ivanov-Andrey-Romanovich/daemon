@@ -7,5 +7,5 @@ Repository with my daemon
     $ kill -SIGUSR1 pid - to send a first signal to daemon
     $ kill -SIGUSR2 pid - to run commands from input.txt (changes will be shown in commandsoutp.txt).
     $ kill pid - just to finish the programm
-#Changes
-	Now daemon can take and run several commands from input.txt
+# Changes
+	Now daemon can take and run several commands from input.txt in parallel processes, result shown in commandsoutp.txt, logs in outp.txt
